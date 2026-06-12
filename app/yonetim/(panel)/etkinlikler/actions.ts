@@ -16,6 +16,7 @@ export async function addActivity(formData: FormData) {
     [ad, aciklama || null]
   );
 
+  revalidatePath("/yonetim/etkinlikler");
   revalidatePath("/etkinlikler");
 }
 
@@ -25,5 +26,6 @@ export async function deleteActivity(formData: FormData) {
 
   await pool.query(`DELETE FROM etkinlikler WHERE id = $1`, [id]);
 
+  revalidatePath("/yonetim/etkinlikler");
   revalidatePath("/etkinlikler");
 }

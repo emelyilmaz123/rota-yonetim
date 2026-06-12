@@ -17,6 +17,7 @@ export async function addRestStop(formData: FormData) {
     [ad, aciklama || null, mola_suresi ? Number(mola_suresi) : null]
   );
 
+  revalidatePath("/yonetim/mola-yerleri");
   revalidatePath("/mola-yerleri");
 }
 
@@ -26,5 +27,6 @@ export async function deleteRestStop(formData: FormData) {
 
   await pool.query(`DELETE FROM mola_yerleri WHERE id = $1`, [id]);
 
+  revalidatePath("/yonetim/mola-yerleri");
   revalidatePath("/mola-yerleri");
 }

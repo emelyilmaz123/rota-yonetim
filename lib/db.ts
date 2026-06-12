@@ -47,3 +47,24 @@ export type Etkinlik = {
   aciklama: string | null;
   created_at: string;
 };
+
+export type Mesaj = {
+  id: number;
+  ad_soyad: string;
+  telefon: string | null;
+  mesaj: string;
+  created_at: string;
+};
+
+export type Rezervasyon = {
+  id: number;
+  ad_soyad: string;
+  telefon: string;
+  binis_yeri: string;
+  inis_yeri: string;
+  tarih: string;
+  yolcu_sayisi: number;
+  notlar: string | null;
+  durum: string;
+  created_at: string;
+};
