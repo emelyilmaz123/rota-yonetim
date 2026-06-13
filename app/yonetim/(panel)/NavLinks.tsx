@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: "/yonetim/yolcular", label: "Yolcular" },
   { href: "/yonetim/mola-yerleri", label: "Mola Yerleri" },
   { href: "/yonetim/etkinlikler", label: "Etkinlikler" },
+  { href: "/yonetim/istatistik", label: "İstatistikler" },
   { href: "/yonetim/mesajlar", label: "Mesajlar" },
 ];
 
